@@ -10,6 +10,9 @@
 <li>You will notice that it generate a shitload of "dirty", logs a lot of errors and warnings, they have to get fixed and I don't have time to keep up with them</li>
 <li>It must be synchronized, the sessions do not close themselves
 <pre>async def qwack</pre>
+  you can find errors like this:
+  <pre>asyncio - ERROR - Unclosed client session</pre>
+  <pre>asyncio - ERROR - Unclosed connector</pre>
 </li>
 <li>The delete function of the sent images is weak, it use .pop randomly, it would be better to do it chronological starting from the oldest, it's a stupid thing to do but I'll let you think about it</li>
 <li>Maybe the regex part is optimizable, maybe to list of occurrences and not to multiple instances, wrap it as you like</li>
