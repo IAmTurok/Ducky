@@ -75,9 +75,10 @@ if __name__ == '__main__':
 
     # control area
     start_handler = CommandHandler('start', start)
-    qwack_Dio_handler = MessageHandler(filters.Regex(re.compile(r'.*[D|d][I|i][O|o].*', re.IGNORECASE)), qwack)
+    qwack_Dio_handler = MessageHandler(filters.Regex(re.compile(r'.*[D|d][I|l|i|1|\|][O|o|0].*', re.IGNORECASE)), qwack)
     qwack_Madonna_handler = MessageHandler(filters.Regex(re.compile(r'.*[M|a]donna.*', re.IGNORECASE)), qwack)
     qwack_Gesu_handler = MessageHandler(filters.Regex(re.compile(r'.*[G|g]es[u|ú|ù].*', re.IGNORECASE)), qwack)
+    qwack_Cristo_handler = MessageHandler(filters.Regex(re.compile(r'([C|c][г|r][I|l|i|1|\|]st[O|o|0])', re.IGNORECASE)), qwack)
     inline_caps_handler = InlineQueryHandler(inline_caps)
     unknown_handler = MessageHandler(filters.COMMAND, unknown)
 
@@ -86,10 +87,11 @@ if __name__ == '__main__':
     application.add_handler(qwack_Dio_handler)
     application.add_handler(qwack_Madonna_handler)
     application.add_handler(qwack_Gesu_handler)
+    application.add_handler(qwack_Cristo_handler)
     application.add_handler(inline_caps_handler)
     application.add_handler(unknown_handler)
     # auto-deletion queue trigger timer
-    job_queue.run_repeating(del_qwack, interval=60, first=600)
+    job_queue.run_repeating(del_qwack, interval=300, first=600)
 
     # job for continuous polling
     application.run_polling()
