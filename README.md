@@ -1,9 +1,9 @@
 # Ducky
 <h1 style="text-align: center;">Qwacker per Giuseppe</h1>
 <p><br /><br />Usual procedure of importing requirements with</p>
-<pre>"<em>pip install -r requirements.txt</em>"</pre>
+<pre><em>pip install -r requirements.txt</em></pre>
 <p>Then get the bot going BY PUTTING YOUR TOKEN and using</p>
-<pre>"<em>python3 Qwack.py</em>"</pre>
+<pre><em>python3 Qwack.py</em></pre>
 <p>&nbsp;</p>
 <p>TO DO:</p>
 <ol>
