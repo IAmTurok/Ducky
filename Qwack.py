@@ -43,6 +43,7 @@ async def qwack(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Cleaner function, every certain time (see below) it activates and deletes the photos of the ducks
 async def del_qwack(context: ContextTypes.DEFAULT_TYPE):
     if delete_list:
+        # -1001283327584 For the "provebot" channel, you need to insert the correct ID for other groups
         await context.bot.delete_message(chat_id='-1001283327584', message_id=delete_list.pop())
 
         
