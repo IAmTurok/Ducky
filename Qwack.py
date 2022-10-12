@@ -21,6 +21,7 @@ async def random():
     async with session.get('https://random-d.uk/api/random{}'.format(query)) as r:
         if r.status == 200:
             body = await r.json()
+            await session.close()
             response = namedtuple('Response', ['message', 'url'])
             return response(message=body['message'], url=body['url'])
         else:
